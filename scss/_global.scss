@@ -21,7 +21,6 @@ body {
 }
 
 a {
-  color: #262626;
   text-decoration: none;
 }
 
@@ -30,18 +29,86 @@ ul {
 }
 
 img {
-  width: 100%;
+  max-width: 100%;
 }
 
-h2, h3 {
-  font-family: "Raleway";
+h1,
+h3 {
+  color: $Very-Dark-Blue;
+}
+
+h1 {
+  font-size: 3.4rem;
+}
+
+h1,
+h3,
+button,
+.cta {
+  font-family: "Raleway", sans-serif;
+}
+
+p {
+  color: $Desaturated-Blue;
 }
 
 .container {
-  width: 100%;
+  max-width: 100%;
+  width: 144rem;
+  padding: 0 6.6rem;
   margin: 0 auto;
-  padding: 0 2rem;
   overflow: hidden;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+
+  & > div {
+    flex: 1;
+  }
+
+  & > div:first-child {
+    margin-right: 4rem;
+  }
+}
+
+form {
+  display: flex;
+  align-items: center;
+}
+
+input {
+  padding: 1.5rem 2rem;
+  border: none;
+  border: 1px solid #000;
+  border-radius: 0.2rem;
+  margin-right: 1.5rem;
+  flex: 0.7;
+}
+
+input:focus {
+  outline: none;
+}
+
+input::placeholder {
+  color: $Light-Gray;
+  font-size: 1.5rem;
+}
+
+button {
+  padding: 1.5rem 4rem;
+  border-radius: 0.2rem;
+  background-color: $Bright-Blue;
+  border: none;
+  color: $Light-Grayish-Blue;
+  font-size: 1.3rem;
+  font-weight: 700;
+  flex: 0.3;
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 // Breakpoints

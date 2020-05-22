@@ -1,0 +1,18 @@
+.hero {
+  margin-top: 10rem;
+  &__left {
+    max-width: 50rem;
+    h1,
+    p {
+      margin-bottom: 2rem;
+    }
+  }
+  &__right {
+    img {
+      display: block;
+      width: 65rem;
+      max-width: 100%;
+      margin-left: auto;
+    }
+  }
+}
