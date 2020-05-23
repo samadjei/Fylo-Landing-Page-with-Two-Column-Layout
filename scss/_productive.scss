@@ -1,4 +1,121 @@
 .productive {
-  margin-top: 12rem;
-  // background-color: $Light-Grayish-Blue;
+  margin-top: 8rem;
+
+  &__bg {
+    background: $Light-Grayish-Blue;
+    padding-top: 8rem;
+
+    @include breakpoint(medium) {
+    }
+  }
+
+  &__left {
+    display: grid;
+    grid-row-gap: 1.5rem;
+    width: 60rem;
+    max-width: 100%;
+    &--p {
+      color: $Very-Dark-Blue;
+      width: 53rem;
+    }
+  }
+  .quote {
+    background: #fff;
+    border-radius: 1rem;
+    margin-top: 2rem;
+    padding: 3rem;
+    width: 36.5rem;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
+
+    img {
+      max-width: 3.1rem;
+      border-radius: 50%;
+      text-align: center;
+      margin-right: 1rem;
+    }
+
+    p {
+      font-size: 1.5rem;
+      letter-spacing: 2;
+      color: $Very-Dark-Blue;
+    }
+
+    &__user {
+      display: flex;
+      align-items: center;
+
+      &--detail {
+        display: flex;
+        flex-direction: column;
+
+        h4 {
+          font-size: 1.2rem;
+          font-weight: 700;
+        }
+
+        p {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+
+  &__right {
+    img {
+      display: block;
+      width: 55rem;
+      max-width: 100%;
+      margin: auto;
+    }
+  }
+
+  @include breakpoint(medium) {
+    &__right {
+      grid-row: 1 /2;
+      text-align: center;
+    }
+
+    &__left {
+      grid-row: 2 / 3;
+      text-align: center;
+    }
+  }
+}
+
+.bg-mobile {
+  display: none;
+  @include breakpoint(medium) {
+    display: block;
+    width: 100%;
+    margin-bottom: -1rem;
+  }
+}
+
+.container {
+  padding-bottom: 10rem;
+}
+
+.bg-desktop {
+  display: block;
+  width: 100%;
+  margin-bottom: -1rem;
+
+  @include breakpoint(medium) {
+    display: none;
+  }
+}
+
+.cta2 {
+  display: inline-block;
+  border: none;
+  color: $Moderate-Cyan;
+  font-size: inherit;
+  border-bottom: 1px solid currentColor;
+  cursor: pointer;
+  padding-bottom: 2px;
+  background-color: transparent;
+  transition: all 0.2s;
+  img {
+    padding-left: 0.5rem;
+  }
 }

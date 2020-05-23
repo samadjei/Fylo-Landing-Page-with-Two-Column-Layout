@@ -33,7 +33,8 @@ img {
 }
 
 h1,
-h3 {
+h3,
+h4 {
   color: $Very-Dark-Blue;
 }
 
@@ -60,57 +61,6 @@ p {
   overflow: hidden;
 }
 
-.flex {
-  display: flex;
-  align-items: center;
-
-  & > div {
-    flex: 1;
-  }
-
-  & > div:first-child {
-    margin-right: 4rem;
-  }
-}
-
-form {
-  display: flex;
-  align-items: center;
-}
-
-input {
-  padding: 1.5rem 2rem;
-  border: none;
-  border: 1px solid #000;
-  border-radius: 0.2rem;
-  margin-right: 1.5rem;
-  flex: 0.7;
-}
-
-input:focus {
-  outline: none;
-}
-
-input::placeholder {
-  color: $Light-Gray;
-  font-size: 1.5rem;
-}
-
-button {
-  padding: 1.5rem 4rem;
-  border-radius: 0.2rem;
-  background-color: $Bright-Blue;
-  border: none;
-  color: $Light-Grayish-Blue;
-  font-size: 1.3rem;
-  font-weight: 700;
-  flex: 0.3;
-
-  &:hover {
-    cursor: pointer;
-  }
-}
-
 // Breakpoints
 $breakpoints: (
   // Phones
@@ -127,6 +77,75 @@ $breakpoints: (
   }
 }
 
-/* @include breakpoint(medium) {
-      padding: 5.6rem 2.5rem;
-    } */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  justify-content: center;
+  align-items: center;
+  grid-gap: 2rem;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  @include breakpoint(small) {
+    flex-direction: column;
+  }
+}
+
+input {
+  padding: 1.5rem 2rem;
+  border: none;
+  border: 1px solid #000;
+  border-radius: 0.2rem;
+  margin-right: 1.5rem;
+  flex: 0.7;
+
+  @include breakpoint(small) {
+    margin-bottom: 2rem;
+    width: 100%;
+  }
+}
+
+input:focus {
+  outline: none;
+}
+
+input::placeholder {
+  color: $Light-Gray;
+  font-size: 1.5rem;
+}
+
+.cta {
+  padding: 1.5rem 4rem;
+  border-radius: 0.2rem;
+  background-color: $Bright-Blue;
+  border: none;
+  color: $Light-Grayish-Blue;
+  font-size: 1.3rem;
+  font-weight: 700;
+  flex: 0.3;
+
+  @include breakpoint(small) {
+    width: 100%;
+    margin-right: 1.5rem;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    text-align: center;
+  }
+
+  // .flex {
+  //   flex-direction: column;
+
+  //   & > div {
+  //     width: 100%;
+  //   }
+  // }
+}

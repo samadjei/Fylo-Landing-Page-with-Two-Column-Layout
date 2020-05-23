@@ -1,7 +1,13 @@
 .hero {
-  margin-top: 10rem;
+  margin-top: 6rem;
+
   &__left {
-    max-width: 50rem;
+    width: 50rem;
+    max-width: 100%;
+    margin: auto;
+    @include breakpoint(medium) {
+      grid-row: 2/3;
+    }
     h1,
     p {
       margin-bottom: 2rem;
@@ -10,9 +16,20 @@
   &__right {
     img {
       display: block;
-      width: 65rem;
+      width: 55rem;
       max-width: 100%;
-      margin-left: auto;
+      margin: auto;
+    }
+  }
+  @include breakpoint(medium) {
+    &__right {
+      grid-row: 1 /2;
+      text-align: center;
+    }
+
+    &__left {
+      grid-row: 2 / 3;
+      text-align: center;
     }
   }
 }

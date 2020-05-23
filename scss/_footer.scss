@@ -1,0 +1,94 @@
+.footer {
+  background: $Very-Dark-Blue;
+
+  .container {
+    padding-top: 20rem;
+
+    @include breakpoint(small) {
+      padding-top: 10rem;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    gap: 3.5rem;
+    grid-template-columns: 3fr 2fr 2fr 2fr;
+    grid-template-rows: 60px 1fr;
+    grid-template-areas: "logo logo logo logo" "contact terms conditions social";
+
+    @include breakpoint(small) {
+      grid-row-gap: 35px;
+      grid-column-gap: 0px;
+      grid-template-columns: 1fr;
+      grid-template-areas: "logo" "contact" "terms" "conditions" "social";
+    }
+  }
+
+  &__logo {
+    grid-area: logo;
+    filter: brightness(0) invert(1);
+  }
+
+  ul li {
+    line-height: 3;
+
+    a {
+      color: #fff;
+    }
+  }
+
+  &__contact,
+  &__terms,
+  &__conditions {
+    justify-self: left;
+    @include breakpoint(small) {
+      justify-self: start;
+    }
+  }
+
+  &__contact {
+    grid-area: contact;
+
+    svg {
+      margin-right: 2rem;
+    }
+  }
+
+  &__terms {
+    grid-area: terms;
+  }
+
+  &__conditions {
+    grid-area: conditions;
+  }
+
+  &__social {
+    display: flex;
+    grid-area: social;
+
+    @include breakpoint(small) {
+      justify-self: center;
+    }
+
+    li a {
+      width: 3.5rem;
+      height: 3.5rem;
+      line-height: 8rem;
+      margin: 0 1rem;
+      display: block;
+      font-size: 1.5rem;
+      border-radius: 50%;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid #fff;
+      transition: all 0.2s ease;
+    }
+
+    i {
+      position: absolute;
+      right: 1rem;
+      left: 1rem;
+      top: 1rem;
+    }
+  }
+}
