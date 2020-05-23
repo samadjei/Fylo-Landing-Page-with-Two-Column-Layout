@@ -72,12 +72,11 @@
   @include breakpoint(medium) {
     &__right {
       grid-row: 1 /2;
-      text-align: center;
+      margin-bottom: 7rem;
     }
 
     &__left {
       grid-row: 2 / 3;
-      text-align: center;
     }
   }
 }
