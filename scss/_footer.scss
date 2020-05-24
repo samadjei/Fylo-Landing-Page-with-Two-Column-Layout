@@ -87,6 +87,11 @@
       overflow: hidden;
       border: 1px solid #fff;
       transition: all 0.2s ease;
+      @include breakpoint(small) {
+        &:hover {
+          cursor: pointer;
+        }
+      }
     }
 
     i {
