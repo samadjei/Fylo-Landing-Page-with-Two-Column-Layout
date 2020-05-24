@@ -27,6 +27,10 @@
   &__logo {
     grid-area: logo;
     filter: brightness(0) invert(1);
+
+    @include breakpoint(medium) {
+      justify-self: left;
+    }
   }
 
   ul li {
