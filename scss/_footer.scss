@@ -2,10 +2,10 @@
   background: $Very-Dark-Blue;
 
   .container {
-    padding-top: 20rem;
+    padding: 8rem 0;
 
     @include breakpoint(small) {
-      padding-top: 10rem;
+      padding: 8rem;
     }
   }
 
@@ -35,6 +35,7 @@
 
   ul li {
     line-height: 3;
+    color: #fff;
 
     a {
       color: #fff;
@@ -74,7 +75,7 @@
       justify-self: center;
     }
 
-    li a {
+    li {
       width: 3.5rem;
       height: 3.5rem;
       line-height: 8rem;
